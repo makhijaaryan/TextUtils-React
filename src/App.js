@@ -67,7 +67,7 @@ function App() {
     <Alert alert={alert} />
     <div className="container my-3">
       <TextForm showAlert={showAlert} heading="Enter text to analyse" mode={mode} />
-      {/* <About/> */}
+      {/* <About mode={mode}/> */}
     </div>   
 
     {/* ^^without react router DOM */}

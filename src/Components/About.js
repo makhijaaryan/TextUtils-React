@@ -1,33 +1,40 @@
 import React, {useState} from 'react'
 
-export default function About() {
+export default function About(props) {
 
-  const [myStyle, setMyStyle] = useState({
-    color: 'black',
-    backgroundColor: 'white'
-  });
 
-  const [btnText, setBtnText] = useState("Enable Dark Mode")
 
-  const themeClick =()=>{
-    if(myStyle.backgroundColor==='black'){
-      setMyStyle({
-        backgroundColor:'white',
-        color:'black'
-      })
-      
-      setBtnText("Enable Dark Mode");
-    }
-    else{
-      setMyStyle({
-        backgroundColor:'black',
-        color:'white',
-        border:'1px solid white'
-      })
-      
-      setBtnText("Enable Light Mode");
-    }
+  let myStyle={
+    color: props.made==='dark'?'white':'black',
+    backgroundColor: props.mode==='dark'?'black':'white'
   }
+
+  // const [myStyle, setMyStyle] = useState({
+  //   color: 'black',
+  //   backgroundColor: 'white'
+  // });
+
+  // const [btnText, setBtnText] = useState("Enable Dark Mode")
+
+  // const themeClick =()=>{
+  //   if(myStyle.backgroundColor==='black'){
+  //     setMyStyle({
+  //       backgroundColor:'white',
+  //       color:'black'
+  //     })
+      
+  //     setBtnText("Enable Dark Mode");
+  //   }
+  //   else{
+  //     setMyStyle({
+  //       backgroundColor:'black',
+  //       color:'white',
+  //       border:'1px solid white'
+  //     })
+      
+  //     setBtnText("Enable Light Mode");
+  //   }
+  // }
 
   return (
     <div className="container" style={myStyle}>
@@ -71,9 +78,9 @@ export default function About() {
         </div>
       </div>
 
-      <div className="container my-3">
+      {/* <div className="container my-3">
         <button type="button" className="btn btn-primary" onClick={themeClick}>{btnText}</button>
-      </div>
+      </div> */}
     </div>
   )
 }

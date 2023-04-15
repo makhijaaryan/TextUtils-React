@@ -10,14 +10,15 @@ function Alert(props) {
   
     return (
 
-    props.alert &&
-    <div>
+    
+    <div style={{height:'50px'}}>
         {/* props.alert && has been used to eleminate the possibility of occurence of error as alert 
         is initialisied to NULL */}
         {/* JSX is converted in JS calls  */}
+        {props.alert &&
          <div className= {`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
             <strong>{captialise(props.alert.type)}</strong>: {props.alert.msg}
-        </div>
+        </div>}
     </div>
   )
 }

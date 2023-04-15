@@ -46,14 +46,14 @@ export default function TextForm(props) {
                 color: props.mode === 'dark'?'white':'black'}}></textarea>
                 {/* 2 {} have been used in the above line, 1st for js 2nd one to call an obj (like backgroundColor) in it */}
             </div>
-            <botton className="btn btn-primary mx-2" onClick={handleUpClick}>Covert to UpperCase</botton>
-            <botton className="btn btn-primary mx-2" onClick={handleLoClick}>Covert to LowerCase</botton>
-            <botton className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</botton>
+            <botton className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>Covert to UpperCase</botton>
+            <botton className="btn btn-primary mx-2 my-1" onClick={handleLoClick}>Covert to LowerCase</botton>
+            <botton className="btn btn-primary mx-2 my-1" onClick={handleClearClick}>Clear Text</botton>
         </div>
         
         <div className="container my-3">
             <h2>Text summmary: </h2>
-            <p>Words: {text.split(' ').length} <br/> Characters :{text.length} </p>
+            <p>Words: {text.split(' ').filter((element)=>{return element.length!==0}).length} <br/> Characters :{text.length} </p>
             <h2>Preview</h2>
             <p>{text.length>0?text:"Enter text in the textbox above"}</p>
         </div>
