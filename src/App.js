@@ -2,6 +2,9 @@
 import './App.css';
 import React, { useState } from 'react';
 
+
+// project built using function based components
+
 // import About from './Components/About';
 
 import Navbar from './Components/Navbar';
