@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 
 //useState is used when states are used in React component
-//useState is one of the React Hooks
-
+//useState is one of the React Hooks.
+ 
 export default function TextForm(props) {
     const handleUpClick = ()=>{
         // console.log('UpperCase Was clicked');
